@@ -1,4 +1,4 @@
-def malaysia_postcode(address_input, chroma_path="../output/vectorstore", model_name="llama3.2:latest", embedding_model="sentence-transformers/all-MiniLM-L6-v2", n_results=5, max_attempts=3):
+def malaysia_postcode(address_input, chroma_path="../output/vectorstore", model_name="llama3.2:latest", embedding_model="../local_model/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf", n_results=5, max_attempts=3):
     import re
     import json
     import chromadb
@@ -27,20 +27,24 @@ def malaysia_postcode(address_input, chroma_path="../output/vectorstore", model_
 
     while attempt < max_attempts and postcode is None:
         answer = llm.invoke(
-            f"Given the following informations {results['documents'][0][0]} ; {results['documents'][0][1]} ; {results['documents'][0][2]} ; \
-            {results['documents'][0][3]} ; {results['documents'][0][4]} for evaluation. \
-            What is the possible postcode for {address_input} strictly based on the informations?\
-            Answer 1 postcode only in json format"
+            f"Given the following informations {results['documents'][0][0]} with similarity score {results['distances'][0][0]} ; \
+            {results['documents'][0][1]} with similarity score {results['distances'][0][1]} ; \
+            {results['documents'][0][2]} with similarity score {results['distances'][0][2]} ; \
+            {results['documents'][0][3]} with similarity score {results['distances'][0][3]} ; \
+            {results['documents'][0][4]} with similarity score {results['distances'][0][4]} for evaluation. \
+            What is the possible postcode and the similarity_score for {address_input} strictly based on the informations?\
+            Answer 1 postcode and score value only in json format"
         )
         json_match = re.search(r"\{[\s\S]*?\}", answer)
         if json_match:
             extracted_json = json_match.group(0)
             try:
                 postcode = json.loads(extracted_json)["postcode"]
-                return postcode
+                similarity_distance = json.loads(extracted_json)["similarity_score"]
+                return [postcode,similarity_distance]
             except Exception:
                 postcode = None
         else:
+            print("No JSON found in answer. Retrying...")
             attempt += 1
-
     return None
