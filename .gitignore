@@ -4,3 +4,9 @@ output/vectorstore/b6822498-f661-46fe-ba00-c7002820d837/length.bin
 output/vectorstore/b6822498-f661-46fe-ba00-c7002820d837/index_metadata.pickle
 output/vectorstore/b6822498-f661-46fe-ba00-c7002820d837/header.bin
 output/vectorstore/b6822498-f661-46fe-ba00-c7002820d837/data_level0.bin
+output/vectorstore/vectorstore/b6822498-f661-46fe-ba00-c7002820d837/data_level0.bin
+output/vectorstore/vectorstore/b6822498-f661-46fe-ba00-c7002820d837/header.bin
+output/vectorstore/vectorstore/b6822498-f661-46fe-ba00-c7002820d837/index_metadata.pickle
+output/vectorstore/vectorstore/b6822498-f661-46fe-ba00-c7002820d837/length.bin
+output/vectorstore/vectorstore/b6822498-f661-46fe-ba00-c7002820d837/link_lists.bin
+output/vectorstore/vectorstore/chroma.sqlite3
