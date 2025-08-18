@@ -6,7 +6,7 @@ from langchain_ollama import OllamaLLM
 from langchain.embeddings import HuggingFaceEmbeddings
 from sentence_transformers import SentenceTransformer
 
-def malaysia_postcode(address_input, chroma_path="../output/vectorstore", model_name="llama3.2:latest", embedding_model="../local_model/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf", n_results=5, max_attempts=3):
+def malaysia_postcode(address_input, chroma_path="./output/vectorstore", model_name="llama3.2:latest", embedding_model="./local_model/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf", n_results=10, max_attempts=5):
 
     # Initialize the persistent ChromaDB client
     chroma_client = chromadb.PersistentClient(path=chroma_path)
@@ -31,6 +31,8 @@ def malaysia_postcode(address_input, chroma_path="../output/vectorstore", model_
 
     attempt = 0
     postcode = np.nan
+    district = np.nan 
+    state = np.nan
     similarity_distance = np.nan  
 
     while attempt < max_attempts and postcode is np.nan:
@@ -41,6 +43,11 @@ def malaysia_postcode(address_input, chroma_path="../output/vectorstore", model_
             {results['documents'][0][2]}; \
             {results['documents'][0][3]}; \
             {results['documents'][0][4]}; \
+            {results['documents'][0][5]}; \
+            {results['documents'][0][6]}; \
+            {results['documents'][0][7]}; \
+            {results['documents'][0][8]}; \
+            {results['documents'][0][9]}; \
             for evaluation. \
             What is the possible postcode for {address_input} strictly based on the informations?\
             Answer 1 postcode value only in json format"
@@ -51,7 +58,7 @@ def malaysia_postcode(address_input, chroma_path="../output/vectorstore", model_
             
             postcode = json.loads(extracted_json)["postcode"].strip()
 
-            i = [0,1,2,3,4]
+            i = [0,1,2,3,4,5,6,7,8,9]
 
             for j in i:
                 doc_postcode = results['documents'][0][j].split(",")[1].strip()
