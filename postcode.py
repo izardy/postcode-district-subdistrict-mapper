@@ -51,6 +51,7 @@ def malaysia_postcode(address_input, chroma_path="../output/vectorstore", model_
             for evaluation. \
             What is the possible postcode for {address_input} strictly based on the informations?\
             Consider the most similar pattern.\
+            Answer shall be extracted from informations only.\
             Answer 1 postcode value only in json format"
         )
         json_match = re.search(r'\{\s*"postcode"\s*:\s*"\d{5}"\s*\}', answer)
