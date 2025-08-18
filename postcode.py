@@ -6,7 +6,7 @@ from langchain_ollama import OllamaLLM
 from langchain.embeddings import HuggingFaceEmbeddings
 from sentence_transformers import SentenceTransformer
 
-def malaysia_postcode(address_input, chroma_path="./output/vectorstore", model_name="llama3.2:latest", embedding_model="./local_model/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf", n_results=10, max_attempts=5):
+def malaysia_postcode(address_input, chroma_path="../output/vectorstore", model_name="llama3.2:latest", embedding_model="../local_model/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf", n_results=10, max_attempts=5):
 
     # Initialize the persistent ChromaDB client
     chroma_client = chromadb.PersistentClient(path=chroma_path)
@@ -50,6 +50,7 @@ def malaysia_postcode(address_input, chroma_path="./output/vectorstore", model_n
             {results['documents'][0][9]}; \
             for evaluation. \
             What is the possible postcode for {address_input} strictly based on the informations?\
+            Consider the most similar pattern.\
             Answer 1 postcode value only in json format"
         )
         json_match = re.search(r'\{\s*"postcode"\s*:\s*"\d{5}"\s*\}', answer)
