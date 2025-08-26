@@ -21,7 +21,7 @@ This project maps Malaysian postcodes to their corresponding districts, sub-dist
 <br><br>
 
 **Data Sources**
-More data can produce more accurate predictions, appreciate for any contributions
+- More data can produce more accurate predictions, appreciate for any contributions
 - [x] Malaysia Postcode Directory (https://malaysiapostcode.com/download)
 - [x] Mukim JSON (https://mazfreelance.github.io/malaysia-jajahan-api/v1/states/mukim.json)  
 - [x] District JSON (https://mazfreelance.github.io/malaysia-jajahan-api/v1/states/district.json)  
