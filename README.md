@@ -12,15 +12,15 @@ This project maps Malaysian postcodes to their corresponding districts, sub-dist
 
 | Folder/File                  | Description |
 |-----------------------------|-------------|
-| `data_source/`              | Raw JSON and CSV data sources |
-| `local_model/models-sentence-transformers/` | Pretrained transformer models for semantic matching |
-| `notebook/`                 | Jupyter notebooks for exploration and prototyping |
-| `output/`                   | Generated outputs (CSV, logs, etc.) |
-| `output/vectorstore`                   | Vectorized address via Chromadb |
-| `postcode.py`               | Core mapping logic and utilities |
-| `test_data.csv`             | Sample input for testing postcode resolution |
-| `.gitignore`, `.gitattributes` | Git configuration files |
-| `README.md`                 | Project documentation |
+| data_source/              | Raw JSON and CSV data sources |
+| local_model/models-sentence-transformers/ | Pretrained transformer models for semantic matching |
+| notebook/                 | Jupyter notebooks for exploration and prototyping |
+| output/                   | Generated outputs (CSV, logs, etc.) |
+| output/vectorstore                   | Vectorized address via Chromadb |
+| postcode.py               | Core mapping logic and utilities |
+| test_data.csv             | Sample input for testing postcode resolution |
+| .gitignore, .gitattributes | Git configuration files |
+| README.md                 | Project documentation |
 
 
 **Data Sources**
