@@ -32,5 +32,11 @@ This project maps Malaysian postcodes to their corresponding districts, sub-dist
 - [x] Geofabrik Malaysia OSM (https://download.geofabrik.de/asia/malaysia-singapore-brunei.html)  
 - [ ] Yellow Pages Malaysia (https://www.yellowpages.my/)
 
----
+**Usage Example**
+```
+import sys
+sys.path.append()  # or the actual path to the script (postcode.py)
+from postcode import malaysia_postcode
 
+print(malaysia_postcode("GRN237447 LOT11499 SEKSYEN 1 (HSD16524,PT1560), TAMAN KASIH PUTERA,PEKAN BAHAU, JEMPOL, NEGERI SEMBILAN,PEKAN BAHAU,JEMPOL"))
+```
