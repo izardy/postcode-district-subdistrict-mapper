@@ -1,5 +1,4 @@
 ### Postcode District & Subdistrict Mapper (Malaysia)
-
 This project maps Malaysian postcodes to their corresponding districts, sub-districts (mukim), and locations. It integrates multiple public datasets and supports semantic search using local sentence-transformer models. Ideal for civic tech, geospatial analysis, and regional data normalization.<br><br>
 
 **Features**
@@ -19,9 +18,10 @@ This project maps Malaysian postcodes to their corresponding districts, sub-dist
 | test_data.csv             | Sample input for testing postcode resolution |
 | .gitignore, .gitattributes | Git configuration files |
 | README.md                 | Project documentation |
+<br><br>
 
 **Data Sources**
-
+More data can produce more accurate predictions, appreciate for any contributions
 - [x] Malaysia Postcode Directory (https://malaysiapostcode.com/download)
 - [x] Mukim JSON (https://mazfreelance.github.io/malaysia-jajahan-api/v1/states/mukim.json)  
 - [x] District JSON (https://mazfreelance.github.io/malaysia-jajahan-api/v1/states/district.json)  
