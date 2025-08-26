@@ -17,7 +17,6 @@ This project maps Malaysian postcodes to their corresponding districts, sub-dist
 | postcode.py               | Core mapping logic and utilities |
 | test_data.csv             | Sample input for testing postcode resolution |
 | .gitignore, .gitattributes | Git configuration files |
-| README.md                 | Project documentation |
 <br><br>
 
 **Data Sources**
