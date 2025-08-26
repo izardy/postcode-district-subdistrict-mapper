@@ -1,12 +1,10 @@
 ### Postcode District & Subdistrict Mapper (Malaysia)
 
-This project maps Malaysian postcodes to their corresponding districts, sub-districts (mukim), and locations. It integrates multiple public datasets and supports semantic search using local sentence-transformer models. Ideal for civic tech, geospatial analysis, and regional data normalization.
-<br>
+This project maps Malaysian postcodes to their corresponding districts, sub-districts (mukim), and locations. It integrates multiple public datasets and supports semantic search using local sentence-transformer models. Ideal for civic tech, geospatial analysis, and regional data normalization.<br>
 **Features**
 
 - Map postcodes to mukim, district, state, and location
-- Semantic matching using sentence-transformers, chromadb vectorstore and llama3.2 model.
-<br>
+- Semantic matching using sentence-transformers, chromadb vectorstore and llama3.2 model.<br>
 
 **Repository Structure**
 
@@ -32,6 +30,7 @@ This project maps Malaysian postcodes to their corresponding districts, sub-dist
 - [x] Geofabrik Malaysia OSM (https://download.geofabrik.de/asia/malaysia-singapore-brunei.html)  
 - [ ] Yellow Pages Malaysia (https://www.yellowpages.my/)
 <br>
+
 **Usage Example**
 ```
 import sys
