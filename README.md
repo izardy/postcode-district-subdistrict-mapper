@@ -19,7 +19,7 @@ This project maps Malaysian postcodes to their corresponding districts, sub-dist
 | test_data.csv             | Sample input for testing postcode resolution |
 | .gitignore, .gitattributes | Git configuration files |
 | README.md                 | Project documentation |
-<br><br>
+<br>
 **Data Sources**
 
 - [x] Malaysia Postcode Directory (https://malaysiapostcode.com/download)
@@ -28,7 +28,8 @@ This project maps Malaysian postcodes to their corresponding districts, sub-dist
 - [x] State JSON (https://mazfreelance.github.io/malaysia-jajahan-api/v1/states.json)  
 - [x] Geofabrik Malaysia OSM (https://download.geofabrik.de/asia/malaysia-singapore-brunei.html)  
 - [ ] Yellow Pages Malaysia (https://www.yellowpages.my/)
-<br><br>
+
+<br>
 **Usage Example**
 ```
 import sys
