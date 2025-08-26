@@ -7,10 +7,7 @@ This project maps Malaysian postcodes to their corresponding districts, sub-dist
 ## 🧭 Features
 
 - 🔍 Map postcodes to mukim, district, state, and location
-- 🧠 Semantic matching using sentence-transformers
-- 📦 Modular structure with notebooks, scripts, and output
-- 📊 CSV input/output for easy integration
-- 🧪 Includes test data for validation
+- 🧠 Semantic matching using sentence-transformers, chromadb vectorstore and llama3.2 model.
 
 ---
 
@@ -22,6 +19,7 @@ This project maps Malaysian postcodes to their corresponding districts, sub-dist
 | `local_model/models-sentence-transformers/` | Pretrained transformer models for semantic matching |
 | `notebook/`                 | Jupyter notebooks for exploration and prototyping |
 | `output/`                   | Generated outputs (CSV, logs, etc.) |
+| `output/vectorstore`                   | Vectorized address via Chromadb |
 | `postcode.py`               | Core mapping logic and utilities |
 | `test_data.csv`             | Sample input for testing postcode resolution |
 | `.gitignore`, `.gitattributes` | Git configuration files |
@@ -31,7 +29,7 @@ This project maps Malaysian postcodes to their corresponding districts, sub-dist
 
 ## 🔗 Data Sources
 
-- [Malaysia Postcode Directory](https://malaysiapostcode.com/download)  
+- [Malaysia Postcode Directory](https://malaysiapostcode.com/download)  [x]
 - [Mukim JSON](https://mazfreelance.github.io/malaysia-jajahan-api/v1/states/mukim.json)  
 - [District JSON](https://mazfreelance.github.io/malaysia-jajahan-api/v1/states/district.json)  
 - [State JSON](https://mazfreelance.github.io/malaysia-jajahan-api/v1/states.json)  
