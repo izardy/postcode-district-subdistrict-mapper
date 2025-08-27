@@ -1,0 +1,12 @@
+pandas
+numpy
+tqdm
+chromadb==0.6.3
+langchain 
+langchain-community 
+langchain-core 
+langchain-text-splitters 
+langchain-ollama 
+langchain-chroma 
+sentence-transformers 
+transformers
