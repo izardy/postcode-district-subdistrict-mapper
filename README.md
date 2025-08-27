@@ -33,6 +33,7 @@ This project maps Malaysian postcodes to their corresponding districts, sub-dist
 
 **Usage Example**
 ```
+# via Python 3.10.16
 import sys
 sys.path.append()  # or the actual path to the script (postcode.py)
 from postcode import malaysia_postcode
