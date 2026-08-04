@@ -1,1 +1,8 @@
+# --- Python noise ---
+__pycache__/
 *.pyc
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
